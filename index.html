@@ -1,85 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Portfolio</title>
-    <style>
-        /* Smooth Scrolling and Font Setup */
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; color: #333; }
-        
-        /* Sticky Navigation Bar Tabs */
-        nav { position: fixed; top: 0; width: 100%; background: #2c3e50; display: flex; justify-content: center; z-index: 1000; }
-        nav a { color: white; text-decoration: none; padding: 15px 25px; font-weight: bold; transition: background 0.3s; }
-        nav a:hover { background: #34495e; }
-
-        /* Page Layout and Sections */
-        section { padding: 80px 20px 40px 20px; max-width: 900px; margin: 0 auto; border-bottom: 1px solid #eee; }
-        .hero { text-align: center; background: #f8f9fa; padding: 100px 20px; }
-        
-        /* Responsive Images */
-        .profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .project-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
-        .project-card { border: 1px solid #ddd; border-radius: 8px; padding: 15px; width: calc(50% - 10px); box-sizing: border-box; }
-        .project-img { width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px; }
-        
-        @media (max-width: 600px) {
-            .project-card { width: 100%; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edward — R&D Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Shared nav. The current page gets class="active". -->
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="cv.html">CV</a>
+    <a href="projects.html">Projects</a>
+  </nav>
 
-    <!-- Navigation Tabs Linking to Page Anchors -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#cv">CV</a>
-        <a href="#projects">Projects</a>
-    </nav>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Portfolio / R&amp;D Engineering</p>
+      <h1>Edward</h1>
+      <p class="lede">Engineering Physics graduate and hands-on builder — robotics,
+      embedded systems, and applied experimental work. I like problems that live
+      where the math meets the hardware.</p>
+      <div class="spec-row">
+        <span>Engineering Physics, UCA</span>
+        <span>R&amp;D Engineering</span>
+        <span>Conway, AR</span>
+      </div>
+      <a href="projects.html" class="btn">View Projects →</a>
+    </div>
+  </header>
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Software Engineer & Designer</p>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <!-- REPLACE WITH YOUR PROFILE IMAGE PATH -->
-        <img src="images/profile.jpg" alt="My Profile Picture" class="profile-img">
-        <p>Write your professional summary here. Talk about your passion, skills, and background.</p>
-    </section>
-
-    <!-- CV Section -->
-    <section id="cv">
-        <h2>Curriculum Vitae (CV)</h2>
-        <h3>Experience</h3>
-        <p><strong>Job Title</strong> — Company Name (2024 - Present)</p>
-        <ul>
-            <li>Detailed bullet point outlining a major technical achievement.</li>
-            <li>Detailed bullet point outlining collaborative team work.</li>
-        </ul>
-        <h3>Education</h3>
-        <p><strong>Degree Name</strong> — University Name (Graduation Year)</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <!-- REPLACE WITH YOUR PROJECT IMAGE PATH -->
-                <img src="images/project1.jpg" alt="Project One Screenshot" class="project-img">
-                <h3>Project Title One</h3>
-                <p>A brief description of what this project does and the technology stack utilized.</p>
-                <p><a href="https://github.com" target="_blank">View Code</a></p>
-            </div>
-        </div>
-    </section>
-
+  <footer>
+    <!-- REPLACE with your real GitHub URL -->
+    Built by Edward · <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+  </footer>
 </body>
 </html>
