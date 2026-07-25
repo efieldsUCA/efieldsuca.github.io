@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects — Edward</title>
+  <title>Projects — Edward Fields</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -29,11 +29,15 @@
         <div class="project-body">
           <div class="tag">Robotics · Embedded</div>
           <h3>Wonkybot</h3>
-          <p>A 4WD mecanum-wheel robot on a Raspberry Pi 5 + Pico 2W. Reused another
-          team's motor-driver PCB and built out the control stack — including tracking
-          down a PH/EN vs. IN/IN driver-protocol mismatch to get the drive working.</p>
+          <p>WonkyBot — My UCA senior design capstone: an autonomous differential-drive robot
+            that clears an arena of colored pneumatic balls and sorts them into respective colored buckets. 
+            A Raspberry Pi 5 runs the ROS 2 Jazzy stack; a Raspberry Pi Pico handles the drive motors, servos, and stepper arm.
+            A single Intel RealSense D455 does double duty, feeding depth-based obstacle avoidance for Nav2/AMCL
+            navigation and driving an HSV-plus-shape vision classifier that distinguishes balls from buckets.
+            Includes a vision-only fallback controller for when SLAM localization isn't available,
+            and a phone-mic voice interface to start and select runs.</p>
           <div class="project-links">
-            <a href="https://github.com/yourusername/wonkybot" target="_blank" rel="noopener">Code →</a>
+            <a href="https://github.com/efieldsUCA/WonkyBot" target="_blank" rel="noopener">Code →</a>
             <!-- <a href="#" target="_blank">Demo →</a> -->
           </div>
         </div>
@@ -43,13 +47,15 @@
       <div class="project-card">
         <img src="images/home-robot.jpg" alt="At-home robot" class="project-img">
         <div class="project-body">
-          <div class="tag">Robotics · Personal</div>
-          <h3>At-Home Robot</h3>
+          <div class="tag">Robotics · Embedded . Personal</div>
+          <h3>Glitch MK2</h3>
           <!-- EDIT: what does it do, and what did you build vs. reuse? -->
-          <p>A personal robot build reusing the same motor-driver PCB. [Add a sentence
-          on what it does and what you designed or wrote yourself.]</p>
+          <p>Glitch MK2 is a personal robot that I am currently working on that will resemble WonkyBot from
+          senior design and HomeR from robotics. The idea of this particular robot is to do all 
+          of the same tasks as the previous projects, and I will likely add machine learning to this 
+          as a means to further integrate autonomous capabilities.</p>
           <div class="project-links">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener">Code →</a>
+            <a href="https://github.com/efieldsUCA" target="_blank" rel="noopener">Code →</a>
           </div>
         </div>
       </div>
@@ -61,23 +67,28 @@
           <div class="tag">R&amp;D · DoE</div>
           <h3>Pipe Dimensional-Stability Study</h3>
           <p>Experimental study of cooling and dimensional stability in manufactured
-          pipe, structured with Six Sigma and Design-of-Experiments methods.</p>
+          pipe, structured with Six Sigma and Design-of-Experiments methods. Taking notes 
+          over the study, but don't expect sensitive information in the write-up.</p>
           <div class="project-links">
             <a href="#" target="_blank" rel="noopener">Write-up →</a>
           </div>
         </div>
       </div>
-
+      
       <!-- Project 4 -->
       <div class="project-card">
         <img src="images/project3.jpg" alt="Project" class="project-img">
         <div class="project-body">
           <div class="tag">Add a tag</div>
-          <h3>Project Title Three</h3>
-          <p>Short description of what it does and the tools you used. Duplicate this
-          whole card block to add more projects.</p>
+          <h3>Randomizing Passcode</h3>
+          <p>This is an embedded systems project that I thought of recently. It will consist of 3 circuits 
+          that would work in tandem to secure and open a lock. One circuit uses an 8-bit shift register
+          IC, which would have specific values/operators depending on the Q# pin. Code for it would 
+          be randomized, and only the user will know the values/operators. The second circuit is a piezo 
+          buzzer that is used as a sound indicator, and the third circuit uses led's for visual. All three 
+          circuits are routed to a rasperry pi pico for PWM and coding.</p>
           <div class="project-links">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener">Code →</a>
+            <a href="https://github.com/efieldsUCA" target="_blank" rel="noopener">Code →</a>
           </div>
         </div>
       </div>
@@ -86,7 +97,7 @@
   </main>
 
   <footer>
-    Built by Edward · <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+    Built by Edward Fields· <a href="https://github.com/efieldsUCA" target="_blank" rel="noopener">GitHub</a>
   </footer>
 </body>
 </html>
