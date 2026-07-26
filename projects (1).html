@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Edward Fields</title>
+  <script>
+    (function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));}catch(e){}})();
+    function toggleTheme(){var el=document.documentElement;var n=el.getAttribute('data-theme')==='dark'?'light':'dark';el.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="cv.html">CV</a>
+    <a href="projects.html" class="active">Projects</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
+  </nav>
+
+  <main>
+    <p class="eyebrow">Projects</p>
+    <h2>Selected work</h2>
+
+    <div class="project-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="wonkybot.png" alt="Wonkybot" class="project-img">
+        <div class="project-body">
+          <div class="tag">Robotics · Embedded · Computer Vision</div>
+          <h3>Wonkybot</h3>
+          <p>My UCA senior design capstone: an autonomous differential-drive robot
+            that clears an arena of colored pneumatic balls and deposits them into their
+            respective colored buckets. A Raspberry Pi 5 runs the ROS 2 Jazzy stack; a
+            Raspberry Pi Pico handles the drive motors, servos, and stepper arm.
+            A single Intel RealSense D455 does double duty — feeding depth-based obstacle
+            avoidance for Nav2/AMCL navigation and driving an HSV-plus-shape vision classifier
+            that distinguishes balls from buckets. Includes a vision-only fallback controller
+            for when SLAM localization isn't available, and a phone-mic voice interface to
+            start and select runs.</p>
+          <div class="project-links" style="flex-direction: column; align-items: flex-start;">
+            <a href="https://github.com/efieldsUCA/WonkyBot" target="_blank" rel="noopener">Code →</a>
+            <a href="wonkybot_ieee_notebook (5) 1.pdf" target="_blank" rel="noopener">IEEE Notebook →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="glitchMK2.jpg" alt="Glitch MK2 robot" class="project-img">
+        <div class="project-body">
+          <div class="tag">Robotics · Embedded · Personal</div>
+          <h3>Glitch MK2</h3>
+          <p>A personal robot I'm currently building, drawing on both WonkyBot from senior
+          design and HomeR from robotics. The main differences: it runs 9V motors with hall
+          sensors instead of 12V motors with encoders, and uses mecanum wheels so it can
+          strafe. The goal is to handle all the same tasks as those earlier projects, and I
+          plan to add machine learning to push its autonomous capabilities further.</p>
+          <div class="project-links">
+            <a href="https://github.com/efieldsUCA" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="embeddedcircuits.jpg" alt="Randomizing passcode circuit" class="project-img">
+        <div class="project-body">
+          <div class="tag">Embedded · Electrical · Personal</div>
+          <h3>Randomizing Passcode</h3>
+          <p>An embedded-systems concept I'm developing: three circuits working in tandem to
+          secure and open a lock. The first uses an 8-bit shift register IC whose Q pins map
+          to specific values/operators; the code is randomized so only the user knows the
+          combination. A second circuit drives a piezo buzzer for audio feedback, and a third
+          uses LEDs for visual indication. All three route to a Raspberry Pi Pico for PWM and
+          control.</p>
+          <div class="project-links">
+            <a href="https://github.com/efieldsUCA" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    Built by Edward Fields · <a href="https://github.com/efieldsUCA" target="_blank" rel="noopener">GitHub</a>
+    <!-- Add LinkedIn: · <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a> -->
+    <!-- Add email:    · <a href="mailto:you@example.com">Email</a> -->
+  </footer>
+</body>
+</html>
