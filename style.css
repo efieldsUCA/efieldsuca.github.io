@@ -1,5 +1,5 @@
 /* Option 1: Warm Editorial & Crafted */
-:root {
+: root {
   --font-disp: "Fraunces", serif;
   --font-body: "DM Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -18,7 +18,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  : root {
     /* Dark Theme Colors (Deep Charcoal/Slate) */
     --bg-main: #111315;
     --bg-card: #191C1E;
@@ -111,7 +111,7 @@ nav a {
   transition: color 0.2s;
 }
 
-nav a:hover, nav a.active {
+nav a: hover, nav a.active {
   color: var(--emerald);
   font-weight: 600;
 }
@@ -184,7 +184,7 @@ nav a:hover, nav a.active {
   transition: color 0.2s ease;
 }
 
-.project-links a:hover {
+.project-links a: hover {
   color: var(--emerald);
 }
 
