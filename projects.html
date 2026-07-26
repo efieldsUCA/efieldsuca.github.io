@@ -19,6 +19,7 @@
     <a href="about.html">About</a>
     <a href="cv.html">CV</a>
     <a href="projects.html" class="active">Projects</a>
+    <a href="demos.html">Demos</a>
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
@@ -33,7 +34,10 @@
 
       <!-- Project 1 -->
       <div class="project-card">
-        <img src="wonkybot.png" alt="WonkyBot" class="project-img">
+        <!-- Replace WONKYBOT_VIDEO_ID with your YouTube video ID (after watch?v= or youtu.be/) -->
+        <iframe class="card-video" src="https://www.youtube.com/embed/WONKYBOT_VIDEO_ID" title="WonkyBot demonstration"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
         <div class="project-body">
           <div class="tag">Robotics · Embedded · Computer Vision</div>
           <h3>WonkyBot</h3>
@@ -48,6 +52,7 @@
             start and select runs.</p>
           <div class="project-links" style="flex-direction: column; align-items: flex-start;">
             <a href="https://github.com/efieldsUCA/WonkyBot" target="_blank" rel="noopener">Code →</a>
+            <a href="https://youtu.be/WONKYBOT_VIDEO_ID" target="_blank" rel="noopener">Watch on YouTube →</a>
             <a href="wonkybot_ieee_notebook (5) 1.pdf" target="_blank" rel="noopener">IEEE Notebook →</a>
           </div>
         </div>
@@ -72,11 +77,14 @@
 
       <!-- Project 3 -->
       <div class="project-card">
-        <img src="embeddedcircuits.jpg" alt="Randomizing passcode circuit" class="project-img">
+        <!-- Replace PASSCODE_VIDEO_ID with your YouTube video ID -->
+        <iframe class="card-video" src="https://www.youtube.com/embed/PASSCODE_VIDEO_ID" title="Randomizing Passcode demonstration"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
         <div class="project-body">
           <div class="tag">Embedded · Electrical · Personal</div>
           <h3>Randomizing Passcode</h3>
-          <p>An embedded-systems concept I'm developing: three circuits working in tandem to
+          <p>An embedded-systems project I built and demonstrated: three circuits working in tandem to
           secure and open a lock. The first uses an 8-bit shift register IC whose Q pins map
           to specific values/operators; the code is randomized so only the user knows the
           combination. A second circuit drives a piezo buzzer for audio feedback, and a third
@@ -84,6 +92,7 @@
           control.</p>
           <div class="project-links">
             <a href="https://github.com/efieldsUCA" target="_blank" rel="noopener">Code →</a>
+            <a href="https://youtu.be/PASSCODE_VIDEO_ID" target="_blank" rel="noopener">Watch on YouTube →</a>
           </div>
         </div>
       </div>
