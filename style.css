@@ -247,3 +247,22 @@ footer a:hover { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto; }
 }
+
+/* ---------- Embedded video ---------- */
+/* In-card video: replaces the thumbnail image at the top of a project card */
+.card-video {
+  display: block; width: 100%; aspect-ratio: 16 / 9;
+  border: 0; border-bottom: 1px solid var(--line); background: #000;
+}
+
+/* Standalone video block (Demos page) */
+.demos-intro { color: var(--muted); margin: -4px 0 8px; max-width: 60ch; }
+.demo { padding: 36px 0; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--nav-h) + 20px); }
+.demo:first-of-type { border-top: none; padding-top: 10px; }
+.demo .tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.demo h3 { margin-bottom: 16px; }
+.video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; box-shadow: 0 10px 30px var(--shadow); }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.demo p { margin-top: 16px; }
+.demo-back { margin-top: 12px; }
+.demo-back a { font-family: var(--font-mono); font-size: 0.85rem; }
