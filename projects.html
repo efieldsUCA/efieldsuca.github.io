@@ -34,10 +34,11 @@
 
       <!-- Project 1 -->
       <div class="project-card">
-        <!-- Replace WONKYBOT_VIDEO_ID with your YouTube video ID (after watch?v= or youtu.be/) -->
-        <iframe class="card-video" src="https://www.youtube.com/embed/WONKYBOT_VIDEO_ID" title="WonkyBot demonstration"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy"></iframe>
+        <!-- Replace WONKYBOT_VIDEO_ID_1 with your primary WonkyBot video ID -->
+        <div class="yt-facade card-facade" data-id="WONKYBOT_VIDEO_ID_1">
+          <img src="wonkybot.png" alt="WonkyBot demo thumbnail" loading="lazy">
+          <button class="yt-play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
         <div class="project-body">
           <div class="tag">Robotics · Embedded · Computer Vision</div>
           <h3>WonkyBot</h3>
@@ -52,7 +53,8 @@
             start and select runs.</p>
           <div class="project-links" style="flex-direction: column; align-items: flex-start;">
             <a href="https://github.com/efieldsUCA/WonkyBot" target="_blank" rel="noopener">Code →</a>
-            <a href="https://youtu.be/WONKYBOT_VIDEO_ID" target="_blank" rel="noopener">Watch on YouTube →</a>
+            <a href="https://youtu.be/WONKYBOT_VIDEO_ID_1" target="_blank" rel="noopener">Watch on YouTube →</a>
+            <a href="demos.html#wonkybot">More demos →</a>
             <a href="wonkybot_ieee_notebook (5) 1.pdf" target="_blank" rel="noopener">IEEE Notebook →</a>
           </div>
         </div>
@@ -60,7 +62,11 @@
 
       <!-- Project 2 -->
       <div class="project-card">
-        <img src="glitchMK2.jpg" alt="Glitch MK2 robot" class="project-img">
+        <!-- Replace MK2_VIDEO_ID with your Glitch MK2 video ID -->
+        <div class="yt-facade card-facade" data-id="MK2_VIDEO_ID">
+          <img src="glitchMK2.jpg" alt="Glitch MK2 demo thumbnail" loading="lazy">
+          <button class="yt-play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
         <div class="project-body">
           <div class="tag">Robotics · Embedded · Personal</div>
           <h3>Glitch MK2</h3>
@@ -71,16 +77,18 @@
           plan to add machine learning to push its autonomous capabilities further.</p>
           <div class="project-links">
             <a href="https://github.com/efieldsUCA" target="_blank" rel="noopener">Code →</a>
+            <a href="https://youtu.be/MK2_VIDEO_ID" target="_blank" rel="noopener">Watch on YouTube →</a>
           </div>
         </div>
       </div>
 
       <!-- Project 3 -->
       <div class="project-card">
-        <!-- Replace PASSCODE_VIDEO_ID with your YouTube video ID -->
-        <iframe class="card-video" src="https://www.youtube.com/embed/PASSCODE_VIDEO_ID" title="Randomizing Passcode demonstration"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy"></iframe>
+        <!-- Replace PASSCODE_VIDEO_ID with your Randomizing Passcode video ID -->
+        <div class="yt-facade card-facade" data-id="PASSCODE_VIDEO_ID">
+          <img src="embeddedcircuits.jpg" alt="Randomizing Passcode demo thumbnail" loading="lazy">
+          <button class="yt-play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
         <div class="project-body">
           <div class="tag">Embedded · Electrical · Personal</div>
           <h3>Randomizing Passcode</h3>
@@ -105,5 +113,20 @@
                            · <a href="https://www.linkedin.com/in/edward-fields-895b80149/" target="_blank" rel="noopener">LinkedIn</a>
                            · <a href="mailto:edwardspike14@gmail.com">Email</a>
   </footer>
+  <script>
+    document.addEventListener('click', function (e) {
+      var f = e.target.closest('.yt-facade');
+      if (!f || f.querySelector('iframe')) return;
+      var id = f.getAttribute('data-id') || '';
+      if (!id || id.indexOf('VIDEO_ID') !== -1) return; // still a placeholder
+      var ifr = document.createElement('iframe');
+      ifr.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      ifr.title = 'Video player';
+      ifr.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      ifr.setAttribute('allowfullscreen', '');
+      f.innerHTML = '';
+      f.appendChild(ifr);
+    });
+  </script>
 </body>
 </html>
