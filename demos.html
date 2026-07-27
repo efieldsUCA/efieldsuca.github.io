@@ -29,19 +29,43 @@
   <main>
     <p class="eyebrow">Demos</p>
     <h2>See it run</h2>
-    <p class="demos-intro">Short demonstrations of the projects in action.</p>
+    <p class="demos-intro">Short demonstrations of the projects in action. Click a thumbnail to play.</p>
 
-    <!-- ===== WonkyBot ===== -->
+    <!-- ===== WonkyBot (2 videos) ===== -->
     <section class="demo" id="wonkybot">
       <div class="tag">Robotics · Embedded · Computer Vision</div>
       <h3>WonkyBot</h3>
-      <div class="video-embed">
-        <!-- Replace WONKYBOT_VIDEO_ID with the ID from your YouTube URL (the part after watch?v= or youtu.be/) -->
-        <iframe src="https://www.youtube.com/embed/WONKYBOT_VIDEO_ID" title="WonkyBot demonstration"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy"></iframe>
+      <div class="demo-multi">
+        <div>
+          <p class="demo-cap">Autonomous run</p>
+          <!-- Replace WONKYBOT_VIDEO_ID_1 -->
+          <div class="yt-facade demos-facade" data-id="WONKYBOT_VIDEO_ID_1">
+            <img src="wonkybot.png" alt="WonkyBot demo 1 thumbnail" loading="lazy">
+            <button class="yt-play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+          </div>
+        </div>
+        <div>
+          <p class="demo-cap">Second clip</p>
+          <!-- Replace WONKYBOT_VIDEO_ID_2 -->
+          <div class="yt-facade demos-facade" data-id="WONKYBOT_VIDEO_ID_2">
+            <img src="wonkybot.png" alt="WonkyBot demo 2 thumbnail" loading="lazy">
+            <button class="yt-play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+          </div>
+        </div>
       </div>
-      <p>Autonomous run: locating colored balls, navigating the arena, and depositing each into its matching bucket.</p>
+      <p class="demo-back"><a href="projects.html">← Back to projects</a></p>
+    </section>
+
+    <!-- ===== Glitch MK2 ===== -->
+    <section class="demo" id="mk2">
+      <div class="tag">Robotics · Embedded · Personal</div>
+      <h3>Glitch MK2</h3>
+      <!-- Replace MK2_VIDEO_ID -->
+      <div class="yt-facade demos-facade" data-id="MK2_VIDEO_ID">
+        <img src="glitchMK2.jpg" alt="Glitch MK2 demo thumbnail" loading="lazy">
+        <button class="yt-play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      </div>
+      <p>Early demonstration of the mecanum-drive personal robot.</p>
       <p class="demo-back"><a href="projects.html">← Back to projects</a></p>
     </section>
 
@@ -49,13 +73,12 @@
     <section class="demo" id="passcode">
       <div class="tag">Embedded · Electrical · Personal</div>
       <h3>Randomizing Passcode</h3>
-      <div class="video-embed">
-        <!-- Replace PASSCODE_VIDEO_ID with the ID from your YouTube URL -->
-        <iframe src="https://www.youtube.com/embed/PASSCODE_VIDEO_ID" title="Randomizing Passcode demonstration"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy"></iframe>
+      <!-- Replace PASSCODE_VIDEO_ID -->
+      <div class="yt-facade demos-facade" data-id="PASSCODE_VIDEO_ID">
+        <img src="embeddedcircuits.jpg" alt="Randomizing Passcode demo thumbnail" loading="lazy">
+        <button class="yt-play" aria-label="Play video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
       </div>
-      <p>The shift-register lock in action, with the buzzer and LED feedback indicating entry state.</p>
+      <p>Core logic demo: sequencing through the 8-bit shift register (full integrated circuit in progress).</p>
       <p class="demo-back"><a href="projects.html">← Back to projects</a></p>
     </section>
   </main>
@@ -65,5 +88,21 @@
                            · <a href="https://www.linkedin.com/in/edward-fields-895b80149/" target="_blank" rel="noopener">LinkedIn</a>
                            · <a href="mailto:edwardspike14@gmail.com">Email</a>
   </footer>
+
+  <script>
+    document.addEventListener('click', function (e) {
+      var f = e.target.closest('.yt-facade');
+      if (!f || f.querySelector('iframe')) return;
+      var id = f.getAttribute('data-id') || '';
+      if (!id || id.indexOf('VIDEO_ID') !== -1) return;
+      var ifr = document.createElement('iframe');
+      ifr.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      ifr.title = 'Video player';
+      ifr.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      ifr.setAttribute('allowfullscreen', '');
+      f.innerHTML = '';
+      f.appendChild(ifr);
+    });
+  </script>
 </body>
 </html>
