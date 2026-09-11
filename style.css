@@ -276,3 +276,12 @@ footer a:hover { color: var(--accent); }
 .demo-back a { font-family: var(--font-mono); font-size: 0.85rem; }
 .demo-multi { display: grid; gap: 20px; }
 .demo-cap { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin: 8px 0 -4px; }
+
+/* ---------- Documentation page ---------- */
+.doc-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 18px 0 8px; }
+.doc-figure { margin: 0; }
+.doc-img { width: 100%; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 6px 20px var(--shadow); background: var(--bg-elev); display: block; }
+.doc-figure figcaption { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+.doc-note { color: var(--muted); font-style: italic; margin-top: 6px; }
+.doc-links { margin-top: 12px; }
+.doc-links a { font-family: var(--font-mono); font-size: 0.85rem; }
