@@ -285,3 +285,13 @@ footer a:hover { color: var(--accent); }
 .doc-note { color: var(--muted); font-style: italic; margin-top: 6px; }
 .doc-links { margin-top: 12px; }
 .doc-links a { font-family: var(--font-mono); font-size: 0.85rem; }
+
+/* ---------- About sidebar ---------- */
+.about-side { display: flex; flex-direction: column; gap: 18px; }
+.about-facts { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--bg-elev); }
+.about-facts .fact { display: flex; flex-direction: column; gap: 2px; margin-bottom: 12px; }
+.about-facts .fact-k { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.about-facts .fact-v { font-size: 0.92rem; color: var(--text); }
+.about-links { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+.about-links a { font-family: var(--font-mono); font-size: 0.82rem; width: fit-content; border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color .2s; }
+.about-links a:hover { border-color: var(--accent); }
