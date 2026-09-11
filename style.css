@@ -325,3 +325,11 @@ footer a:hover { color: var(--accent); }
 .home-card p { font-size: 0.92rem; flex: 1; }
 .home-card-go { font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); margin-top: 16px; }
 @media (max-width: 680px) { .home-cards { grid-template-columns: 1fr; } }
+
+
+/* ---------- Home hero: centered ---------- */
+.hero-inner { text-align: center; }
+.hero .eyebrow { justify-content: center; }
+.hero .lede { margin-left: auto; margin-right: auto; }
+.hero .spec-row { justify-content: center; }
+.hero .hero-ctas { justify-content: center; }
