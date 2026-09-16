@@ -334,3 +334,7 @@ footer a:hover { color: var(--accent); }
 .hero .spec-row { justify-content: center; }
 .hero .hero-ctas { justify-content: center; }
 .doc-subhead { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text); margin: 26px 0 4px; }
+
+/* ---------- Documentation: click-to-enlarge ---------- */
+.doc-figure a { display: block; cursor: zoom-in; }
+.doc-figure a:hover .doc-img { border-color: var(--accent-ring); }
