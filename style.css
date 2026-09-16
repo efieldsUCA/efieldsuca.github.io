@@ -333,3 +333,4 @@ footer a:hover { color: var(--accent); }
 .hero .lede { margin-left: auto; margin-right: auto; }
 .hero .spec-row { justify-content: center; }
 .hero .hero-ctas { justify-content: center; }
+.doc-subhead { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text); margin: 26px 0 4px; }
