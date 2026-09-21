@@ -338,3 +338,5 @@ footer a:hover { color: var(--accent); }
 /* ---------- Documentation: click-to-enlarge ---------- */
 .doc-figure a { display: block; cursor: zoom-in; }
 .doc-figure a:hover .doc-img { border-color: var(--accent-ring); }
+/* Vertical (Shorts) facade */
+.yt-facade.vertical { aspect-ratio: 9 / 16; max-width: 340px; }
